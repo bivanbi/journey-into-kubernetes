@@ -9,16 +9,16 @@ minikube delete
 
 ## Start Dashboard
 * Open in browser window automatically
-   ```commandline
+   ```shell
     minikube dashboard
     ```
 * Print URL to console
-    ```commandline
+    ```shell
     minikube dashbord -url
     ```
 
 ## Addons
-```commandline
+```shell
 minikube addons list
 
 minikube addons enable <addon name>
@@ -27,10 +27,10 @@ minikube addons disable <addon name>
 
 ## Interacting with Minikube Cluster
 * Open Service in Browser Window
-  ```commandline
+  ```shell
   minikube service <service name>
   ```
 * Run kubectl
-  ```commandline
+  ```shell
   minikube kubectl -- <kubectl command>
   ```
