@@ -65,9 +65,6 @@ apt install containerd kubelet kubeadm kubectl
 
 *If multiple IP address ranges are used (e.g. one IPv4 and one IPv6), specify them both as a comma separated list.*
 
-**kubeadm will print exact commands to join further control plane and worker nodes to the cluster.
-Make sure to save these commands for later use.**
-
 #### 1.2. Make root user aware of the kubernetes config
 ```shell
 export KUBECONFIG=/etc/kubernetes/admin.conf
@@ -86,6 +83,12 @@ for details.
 ### 3. Join Further Control Plane or Worker Nodes
 The Kubernetes cluster is functional with just a single (master + worker in one) node, but it provides no
 redundancy, and for security reasons it is recommended to keep master separate from workers.
+
+#### 3.1 Create join token
+Go to a master node and create a join token:
+```shell
+kubeadm token create --print-join-command
+```
 
 #### 3.1. Join Control Plane Node
 ```shell
