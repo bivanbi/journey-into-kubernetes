@@ -27,6 +27,9 @@ Official Tutorial: [Hello Minikube](https://kubernetes.io/docs/tutorials/hello-m
 Official documentation:
 [Creating a cluster with kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/)
 
+## 3. First Pods
+3.1 [First Single Container Pod](pods/single-container-pod-with-alpine.md)
+
 ## Tools
 
 - [k9s](https://k9scli.io/) - Terminal UI to interact with your Kubernetes clusters. Absolute musthave.
