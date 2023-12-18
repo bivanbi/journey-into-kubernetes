@@ -32,7 +32,7 @@ Official documentation:
 
 ## Tools
 
-- [k9s](https://k9scli.io/) - Terminal UI to interact with your Kubernetes clusters. Absolute musthave.
+- [k9s](https://k9scli.io/) - Terminal UI to interact with your Kubernetes clusters. Absolute must-have.
 
 ## Terminology
 
