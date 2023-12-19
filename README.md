@@ -2,6 +2,17 @@
 
 First year into learning Kubernetes - from Minikube through manual operation to automation.
 
+## Foreword
+
+Kubernetes is a great platform for managing complex containerized applications and the nodes they run on.
+Networking, storage, security, monitoring, logging, and many other aspects can be configured in a declarative
+way through so-called manifests. Kubernetes and all the different 'plugins' running under the hood then
+take care of converging the cluster to this desired state.
+
+It promotes good patterns and practices for building highly available, scalable and distributed applications.
+While it might seem overly complicated at first, the concept is really not that hard to grasp.
+And with all the available plugins, many tedious tasks become much simpler.
+
 ### Components used:
 
 * Ubuntu 22.04
@@ -27,8 +38,19 @@ Official Tutorial: [Hello Minikube](https://kubernetes.io/docs/tutorials/hello-m
 Official documentation:
 [Creating a cluster with kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/)
 
-## 3. First Pods
-3.1 [First Single Container Pod](pods/single-container-pod-with-alpine.md)
+## 3. 'Manual' Operation
+
+The true power of Kubernetes shines when things are automated. But it is crucial to have a good understanding
+of the building blocks that will be later managed by automation tools.
+
+Pods are really not meant to be managed by hand. If created manually, they will not be automatically re-created if
+killed / removed. The pod definition cannot be directly updated through `kubectl apply`. They are meant to be managed by
+higher-level resources like Deployments, StatefulSets etc. But to understand them better, let's create a few manually.
+
+3.0 [Create Namespace](namespaces/create-namespace.md) - create a namespace to keep things organized.
+
+3.1 [Single Container Pod](pods/single-container-pod.md) - no network, no persistent storage, just a simple
+container.
 
 ## Tools
 
@@ -37,3 +59,11 @@ Official documentation:
 ## Terminology
 
 See [Terminology](terminology.md) for a list of Kubernetes terms and concepts.
+
+# TODO
+
+## 3. pods manually
+
+- multicontainer pod with initcontainer, emptyDir volume and multiple ports
+
+## 4. persistent storage
