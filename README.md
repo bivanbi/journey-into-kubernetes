@@ -52,6 +52,9 @@ higher-level resources like Deployments, StatefulSets etc. But to understand the
 3.1 [Single Container Pod](pods/single-container-pod.md) - no network, no persistent storage, just a simple
 container.
 
+3.2 [Pod with Service](pods/single-container-pod-with-service.md) - expose a pod to the outside world on a specific
+port.
+
 ## Tools
 
 - [k9s](https://k9scli.io/) - Terminal UI to interact with your Kubernetes clusters. Absolute must-have.
