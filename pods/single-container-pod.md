@@ -8,7 +8,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: alpine
-  namespace: default
+  namespace: web-app-namespace
 spec:
   containers:
     - name: alpine
@@ -23,12 +23,12 @@ kubectl apply -f alpine.yaml
 
 Verify that the pod is running:
 ```shell
-root@controller-01:~# kubectl get pods
+root@controller-01:~# kubectl get pods -n web-app-namespace
 NAME     READY   STATUS    RESTARTS   AGE
 alpine   1/1     Running   0          89s
 ```
 
 ## Run Shell in Pod
 ```shell
-`kubectl exec -it alpine -- /bin/sh
+`kubectl exec -it -n web-app-namespace alpine -- /bin/sh
 ````
