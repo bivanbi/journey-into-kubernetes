@@ -52,14 +52,12 @@ Official Tutorial: [Hello Minikube](https://kubernetes.io/docs/tutorials/hello-m
 Official documentation:
 [Creating a cluster with kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/)
 
-## 3. 'Manual' Operation
+## 3. Run Simple Workloads Manually
 
-The true power of Kubernetes shines when things are automated. But it is crucial to have a good understanding
-of the building blocks that will be later managed by automation tools.
-
-Pods are really not meant to be managed by hand. If created manually, they will not be automatically re-created if
-killed / removed. The pod definition cannot be directly updated through `kubectl apply`. They are meant to be managed by
-higher-level resources like Deployments, StatefulSets etc. But to understand them better, let's create a few manually.
+In this section, we are creating `Pods`, `Services`, `PersistentVolumeClaims` manually, to realize our
+first 'application' on Kubernetes. Especially pods are not meant to be managed this way, but it is crucial
+to have a good understanding of the building blocks that will be later managed by higher-level resources like
+`Deployments`, `StatefulSets` etc.
 
 3.0 [Create Namespace](namespaces/create-namespace.md) - create a namespace to keep things organized.
 
