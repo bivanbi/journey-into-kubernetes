@@ -4,11 +4,10 @@
 
 * [Workload](https://kubernetes.io/docs/concepts/workloads/) - A workload is an application running on Kubernetes;
   running inside a set of [Pods](https://kubernetes.io/docs/concepts/workloads/pods/).
-* [Resource](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/) - Resources describe
-  the (anticipated) state of the cluster. A
-  *resource* is an endpoint in the Kubernetes API that stores a collection of API objects of a
-  certain kind; for example, the built-in *Pod* resource contains a collection of Pod objects.
-
+* [Object](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/) - Objects describe
+  the (anticipated) state of the cluster.
+* [Manifest](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/#object-spec-and-status)
+  - A manifest is a YAML or JSON file that describes a Kubernetes object.
 * [Pod](https://kubernetes.io/docs/concepts/workloads/pods/) - The smallest deployable unit of computing that can be
   created and managed in Kubernetes. A Pod is similar to a set of containers with shared namespaces and shared
   filesystem volumes.

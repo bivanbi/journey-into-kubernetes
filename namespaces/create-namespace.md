@@ -3,7 +3,7 @@
 While the `default` namespace is created automatically, it is a good practice to create a custom namespace to start
 with.
 
-## Resource Definition
+## Manifest
 
 ```yaml
 apiVersion: v1

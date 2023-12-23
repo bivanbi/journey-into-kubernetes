@@ -6,8 +6,8 @@ First year into learning Kubernetes - from Minikube through manual operation to 
 
 Kubernetes is a great platform for managing complex containerized applications and the nodes they run on.
 The desired state of the cluster - networking, storage, security, monitoring, logging, and many other aspects -
-are described through so-called resource definitions or manifests, in a declarative way.
-Kubernetes and all the different 'plugins' then take care of converging the cluster to this desired state.
+are described through so-called objects, in a declarative way. Kubernetes and all the different 'plugins' then take care
+of converging the cluster to this desired state.
 
 It promotes good patterns and practices for building highly available, scalable and distributed applications.
 While it might seem overly complicated at first, the concept is really not that hard to grasp.
@@ -18,13 +18,13 @@ And with all the available plugins, many tedious tasks become much simpler.
 ### Mind the Terminology
 
 There are certain terms that are used in Kubernetes that have a very specific meaning. For
-example, `Workload`, `Service` and `Deployment` are exact resource kinds, not just generic terms. If in doubt, check
+example, `Workload`, `Service` and `Deployment` are exact object kinds, not just generic terms. If in doubt, check
 the [Terminology](terminology.md).
 
 ### Always verify the state of the cluster
 
 It can (and will) happen, that we describe a state that is not possible to achieve. We might not get an error message
-when applying the resource definition. To find out if there is an error and what the error is, query the state
+when applying the manifest. To find out if there is an error and what the error is, query the state
 and check logs of the affected components.
 
 ## Components used
@@ -56,7 +56,7 @@ Official documentation:
 
 In this section, we are creating `Pods`, `Services`, `PersistentVolumeClaims` manually, to realize our
 first 'application' on Kubernetes. Especially pods are not meant to be managed this way, but it is crucial
-to have a good understanding of the building blocks that will be later managed by higher-level resources like
+to have a good understanding of the building blocks that will be later managed by higher-level objects like
 `Deployments`, `StatefulSets` etc.
 
 3.0 [Create Namespace](namespaces/create-namespace.md) - create a namespace to keep things organized.

@@ -2,7 +2,7 @@
 In this section we are creating a simple pod with Alpine Linux.
 No persistent storage, no networking, just a simple pod with a single container.
 
-## Resource Definition
+## Manifest
 ```yaml
 apiVersion: v1
 kind: Pod

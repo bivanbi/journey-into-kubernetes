@@ -3,7 +3,7 @@
 One step further: Expose a pod to the outside world on a specific port.
 Still no persistent storage.
 
-## Resource Definition
+## Manifest
 
 ```yaml
 apiVersion: v1
