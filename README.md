@@ -67,6 +67,21 @@ container.
 3.2 [Pod with Service](pods/single-container-pod-with-service.md) - expose a pod to the outside world on a specific
 port.
 
+## 4. Simple Deployment
+
+In the previous section, we manually created pods.
+This is not how it is meant to be. Pods are sort of 'one-shot' objects, they are meant to be managed
+by higher-level objects like `Deployments`, `StatefulSets` etc., and come with some limitations:
+
+- pods are not automatically re-created if they are killed.
+- only some properties of pods can be updated by applying updated Pod manifest, for everything else they need to be
+  deleted and re-created.
+
+This is where Deployments come into the picture. Deployments can create, re-create / update and even roll back
+the pods. They can also manage ReplicaSets to maintain a certain number of replicas of a pod.
+
+4.1 [Simple Deployment](deployments/simple-deployment.md) - create a deployment with a single replica.
+
 ## Tools
 
 - [k9s](https://k9scli.io/) - Terminal UI to interact with your Kubernetes clusters. Absolute must-have.
