@@ -2,12 +2,12 @@
 
 ### Basics
 
-* [Resource](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/) - A
-  *resource* is an endpoint in the Kubernetes API that stores a collection of API objects of a
-  certain kind; for example, the built-in *pods* resource contains a collection of Pod objects.
-  Resources describe the (anticipated) state of the cluster.
 * [Workload](https://kubernetes.io/docs/concepts/workloads/) - A workload is an application running on Kubernetes;
-  running inside a a set of [Pods](https://kubernetes.io/docs/concepts/workloads/pods/).
+  running inside a set of [Pods](https://kubernetes.io/docs/concepts/workloads/pods/).
+* [Resource](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/) - Resources describe
+  the (anticipated) state of the cluster. A
+  *resource* is an endpoint in the Kubernetes API that stores a collection of API objects of a
+  certain kind; for example, the built-in *Pod* resource contains a collection of Pod objects.
 
 * [Pod](https://kubernetes.io/docs/concepts/workloads/pods/) - The smallest deployable unit of computing that can be
   created and managed in Kubernetes. A Pod is similar to a set of containers with shared namespaces and shared
@@ -20,6 +20,10 @@
 * [Service](https://kubernetes.io/docs/concepts/services-networking/service/) - A method for exposing a
   network application that is running as one or more [Pods](https://kubernetes.io/docs/concepts/workloads/pods/)
   in your cluster.
+* [PersistentVolume](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) - A cluster-wide storage
+  volume that is automatically mounted as a volume in a [Pod](https://kubernetes.io/docs/concepts/workloads/pods/).
+* [PersistentVolumeClaim](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) -
+  A request for a persistent volume that can be dynamically provisioned by a storage class.
 
 ### Advanced
 
@@ -27,7 +31,7 @@
   *operates* on the Kubernetes cluster itself; adding automation and/or features to Kubernetes, much like
   plugins any ordinary application.
 
-* [Custom Resource](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) - A
-  *custom resource* is an extension of the Kubernetes API that is not necessarily available in a default Kubernetes
-  installation. It represents a customization of a particular Kubernetes installation. It can be provided
-  by an operator, for example.
+* [CustomResourceDefinition](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) -
+  A *custom resource definition* (CRD) is an extension of the Kubernetes API that
+  is not necessarily available in a default Kubernetes installation. It represents a customization of a particular
+  Kubernetes installation. It can be provided by an `Operator`, for example.
